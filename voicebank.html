@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Voicebank — Iirai</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400&family=Noto+Sans+JP:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .vb-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .vb-cover {
+            border: var(--border-thin);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b6b6b;
+        }
+
+        .vb-info h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .vb-version {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: #c7362d;
+            border: 1px solid #c7362d;
+            padding: 0.2rem 0.6rem;
+            margin: 0 0 1.5rem;
+        }
+
+        .vb-specs dl {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .vb-specs dt {
+            color: #6b6b6b;
+        }
+
+        .vb-specs dd {
+            margin: 0;
+        }
+
+        .vb-desc {
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #c7362d;
+            color: #f7f4ed;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        .download-btn:hover {
+            opacity: 0.85;
+        }
+
+        @media (max-width: 768px) {
+            .vb-detail {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        .vb-wiki {
+            margin-top: 3rem;
+            border-top: 1px solid rgba(26, 26, 26, 0.15);
+            padding-top: 2rem;
+        }
+
+        .vb-wiki h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .vb-wiki ul {
+            margin-left: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .vb-wiki p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>eli_lab voicebox</h1>
+        <p class="tagline">UTAU Voicebanks & Vocal Tools</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="voicebanks.html" class="active">Voicebanks</a>
+            <a href="releases.html">Releases</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="vb-detail">
+            <div class="vb-cover">Cover image</div>
+            <div class="vb-info">
+                <h2 id="n">Name</h2>
+                <span class="vb-version" id="v">V1</span>
+                <dl class="vb-specs">
+                    <dt>Type</dt>
+                    <dd id="t"></dd>
+                    <dt>Language</dt>
+                    <dd id="l"></dd>
+                    <dt>Range</dt>
+                    <dd id="r"></dd>
+                    <dt>Status</dt>
+                    <dd id="s"></dd>
+                </dl>
+                <p class="vb-desc" id="d"></p>
+                <a href="#" class="download-btn">Download</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 eli_lab voicebox</p>
+        <p>UTAU synthesizer • Japanese & English</p>
+        <div class="seal">音</div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const p = new URLSearchParams(location.search);
+        const vb = voicebanks.find(v => v.id === p.get("id"));
+        if (vb) {
+            document.getElementById("n").textContent = vb.name;
+            document.getElementById("v").textContent = vb.version;
+            document.getElementById("t").textContent = vb.type;
+            document.getElementById("l").textContent = vb.language;
+            document.getElementById("r").textContent = vb.range;
+            document.getElementById("s").textContent = vb.statusText;
+            document.getElementById("d").textContent = vb.description;
+        }
+    </script>
+</body>
+
+</html>

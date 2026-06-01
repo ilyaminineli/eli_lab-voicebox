@@ -1,0 +1,289 @@
+:root {
+    --bg-paper: #f7f4ed;
+    --ink-black: #1a1a1a;
+    --vermillion: #c7362d;
+    --indigo-muted: #4a5a6b;
+    --sumi-gray: #6b6b6b;
+    --border-thin: 1px solid #1a1a1a;
+    --border-subtle: 1px solid rgba(26, 26, 26, 0.15);
+    --frame-thickness: 1px;
+    /* same as card border */
+    --frame-offset: 2rem;
+    /* distance from browser edge */
+    --font-heading: "Noto Serif JP", Georgia, serif;
+    --font-body: "Noto Sans JP", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f7f4ed;
+    color: #1a1a1a;
+    font-family: var(--font-body);
+    line-height: 1.7;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    padding: 3rem;
+    /* internal passe-partout offset */
+}
+
+/* Passe-partout-style decorative frame that scrolls with the page */
+body::before {
+    content: "";
+    position: absolute;
+    /* changed from fixed */
+    top: var(--frame-offset);
+    left: var(--frame-offset);
+    right: var(--frame-offset);
+    bottom: var(--frame-offset);
+    border: 1px solid #1a1a1a;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1.5rem;
+    }
+}
+
+a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #c7362d;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+header {
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+}
+
+header h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #c7362d;
+    margin: 1.2rem auto 0;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    color: #6b6b6b;
+    margin-top: 1.2rem;
+    font-weight: 300;
+}
+
+nav {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    border-bottom: none;
+    position: relative;
+    padding-bottom: 0.2rem;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: #c7362d;
+    transition: width 0.2s;
+}
+
+nav a.active::after,
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 1.8em;
+    background: #c7362d;
+}
+
+.voicebank-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.voicebank-card {
+    border: var(--border-thin);
+    padding: 1.8rem;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: block;
+}
+
+.voicebank-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(26, 26, 26, 0.08);
+}
+
+.voicebank-card::before,
+.voicebank-card::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #1a1a1a;
+}
+
+.voicebank-card::before {
+    top: 8px;
+    left: 8px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.voicebank-card::after {
+    bottom: 8px;
+    right: 8px;
+    border-left: none;
+    border-top: none;
+}
+
+.card-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.version {
+    font-size: 0.75rem;
+    color: #c7362d;
+    border: 1px solid #c7362d;
+    padding: 0.15rem 0.5rem;
+    letter-spacing: 0.08em;
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    margin-left: 0.5rem;
+}
+
+.status-released {
+    background: #c7362d;
+    color: #f7f4ed;
+}
+
+.status-beta {
+    background: #4a5a6b;
+    color: #f7f4ed;
+}
+
+.status-upcoming {
+    background: #6b6b6b;
+    color: #f7f4ed;
+}
+
+.card-meta {
+    font-size: 0.85rem;
+    color: #6b6b6b;
+    margin: 0.8rem 0;
+}
+
+.card-meta span {
+    display: block;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+}
+
+.card-link {
+    font-size: 0.85rem;
+    border-bottom: 1px solid #c7362d;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: var(--border-subtle);
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: #6b6b6b;
+}
+
+.seal {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #c7362d;
+    color: #f7f4ed;
+    border-radius: 50%;
+    line-height: 40px;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav {
+        gap: 1.5rem;
+    }
+
+    .voicebank-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+}

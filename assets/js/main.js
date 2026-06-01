@@ -10,7 +10,7 @@ const voicebanks = [
     statusText: "Released",
     description: "The original voicebank with a soft, gentle timbre. Designed for ballads and emotional pieces.",
     link: "voicebank.html?id=iirai-v1",
-    cover: "assets/img/covers/iirai_v1.png",
+    cover: "assets/img/covers/iirai_ver1.png",
 
     wiki: {
       overview: "Iirai V1 is a CVVC-based Japanese voicebank focused on expressive, emotional singing. Ideal for ballads, mid-tempo pop, and soft electronic tracks.",
@@ -26,7 +26,7 @@ const voicebanks = [
     },
 
     gallery: [
-      "assets/img/covers/iirai_v1.png"
+      "assets/img/covers/iirai_ver1.png"
     ]
   },
   {

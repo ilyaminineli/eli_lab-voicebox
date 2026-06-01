@@ -12,10 +12,10 @@
     <style>
         .vb-detail {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 3rem;
             align-items: start;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -27,6 +27,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 2rem;
         }
 
         .vb-cover img {
@@ -34,6 +35,32 @@
             height: 100%;
             object-fit: cover;
             display: block;
+        }
+
+        .vb-wiki {
+            border-top: 1px solid rgba(26, 26, 26, 0.15);
+            padding-top: 1.5rem;
+        }
+
+        .vb-wiki h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .vb-wiki ul {
+            margin-left: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .vb-wiki p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .vb-info {
+            position: sticky;
+            top: 2rem;
         }
 
         .vb-info h2 {
@@ -67,7 +94,7 @@
         }
 
         .vb-desc {
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             line-height: 1.8;
         }
 
@@ -77,38 +104,20 @@
             color: #f7f4ed;
             padding: 0.8rem 2rem;
             text-decoration: none;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
 
         .download-btn:hover {
             opacity: 0.85;
         }
 
-        .vb-wiki {
-            margin-top: 3rem;
-            border-top: 1px solid rgba(26, 26, 26, 0.15);
-            padding-top: 2rem;
-        }
-
-        .vb-wiki h3 {
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            margin: 2rem 0 1rem;
-        }
-
-        .vb-wiki ul {
-            margin-left: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .vb-wiki p {
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
         @media (max-width: 768px) {
             .vb-detail {
                 grid-template-columns: 1fr;
+            }
+
+            .vb-info {
+                position: static;
             }
         }
     </style>
@@ -128,24 +137,11 @@
 
     <main>
         <div class="vb-detail">
-            <div class="vb-cover">
-                <img id="vb-cover-img" alt="Cover">
-            </div>
-            <div class="vb-info">
-                <h2 id="vb-name">Name</h2>
-                <span class="vb-version" id="vb-version">V1</span>
-                <dl class="vb-specs">
-                    <dt>Type</dt>
-                    <dd id="vb-type"></dd>
-                    <dt>Language</dt>
-                    <dd id="vb-language"></dd>
-                    <dt>Range</dt>
-                    <dd id="vb-range"></dd>
-                    <dt>Status</dt>
-                    <dd id="vb-status"></dd>
-                </dl>
-                <p class="vb-desc" id="vb-desc"></p>
-                <a href="#" class="download-btn" id="vb-download">Download</a>
+            <!-- LEFT: image + wiki + gallery + poll -->
+            <div>
+                <div class="vb-cover">
+                    <img id="vb-cover-img" alt="Cover">
+                </div>
 
                 <div class="vb-wiki">
                     <h3>Overview</h3>
@@ -163,10 +159,30 @@
                     <h3>License</h3>
                     <p id="vb-license"></p>
 
-                    <h3>Gallery</h3>
-                    <div id="vb-gallery"></div>
-
                     <div id="vb-poll"></div>
+                </div>
+            </div>
+
+            <!-- RIGHT: basic info + description + download -->
+            <div class="vb-info">
+                <div class="vb-info-flex">
+                    <h2 id="vb-name">Name</h2>
+                    <span class="vb-version" id="vb-version">V1</span>
+
+                    <dl class="vb-specs">
+                        <dt>Type</dt>
+                        <dd id="vb-type"></dd>
+                        <dt>Language</dt>
+                        <dd id="vb-language"></dd>
+                        <dt>Range</dt>
+                        <dd id="vb-range"></dd>
+                        <dt>Status</dt>
+                        <dd id="vb-status"></dd>
+                    </dl>
+
+                    <p class="vb-desc" id="vb-desc"></p>
+
+                    <a href="#" class="download-btn" id="vb-download">Download</a>
                 </div>
             </div>
         </div>

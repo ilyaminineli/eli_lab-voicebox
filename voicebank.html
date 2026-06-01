@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Voicebank — Iirai</title>
+    <title>Voicebank — eli_lab voicebox</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400&family=Noto+Sans+JP:wght@400&display=swap"
         rel="stylesheet">
@@ -22,10 +22,18 @@
         .vb-cover {
             border: var(--border-thin);
             aspect-ratio: 1;
+            padding: 0;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #6b6b6b;
+        }
+
+        .vb-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .vb-info h2 {
@@ -76,13 +84,6 @@
             opacity: 0.85;
         }
 
-        @media (max-width: 768px) {
-            .vb-detail {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
         .vb-wiki {
             margin-top: 3rem;
             border-top: 1px solid rgba(26, 26, 26, 0.15);
@@ -104,6 +105,12 @@
             line-height: 1.7;
             margin-bottom: 1rem;
         }
+
+        @media (max-width: 768px) {
+            .vb-detail {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -121,22 +128,46 @@
 
     <main>
         <div class="vb-detail">
-            <div class="vb-cover">Cover image</div>
+            <div class="vb-cover">
+                <img id="vb-cover-img" alt="Cover">
+            </div>
             <div class="vb-info">
-                <h2 id="n">Name</h2>
-                <span class="vb-version" id="v">V1</span>
+                <h2 id="vb-name">Name</h2>
+                <span class="vb-version" id="vb-version">V1</span>
                 <dl class="vb-specs">
                     <dt>Type</dt>
-                    <dd id="t"></dd>
+                    <dd id="vb-type"></dd>
                     <dt>Language</dt>
-                    <dd id="l"></dd>
+                    <dd id="vb-language"></dd>
                     <dt>Range</dt>
-                    <dd id="r"></dd>
+                    <dd id="vb-range"></dd>
                     <dt>Status</dt>
-                    <dd id="s"></dd>
+                    <dd id="vb-status"></dd>
                 </dl>
-                <p class="vb-desc" id="d"></p>
-                <a href="#" class="download-btn">Download</a>
+                <p class="vb-desc" id="vb-desc"></p>
+                <a href="#" class="download-btn" id="vb-download">Download</a>
+
+                <div class="vb-wiki">
+                    <h3>Overview</h3>
+                    <p id="vb-overview"></p>
+
+                    <h3>Features</h3>
+                    <ul id="vb-features"></ul>
+
+                    <h3>Recommended usage</h3>
+                    <p id="vb-usage"></p>
+
+                    <h3>Recording notes</h3>
+                    <p id="vb-recording"></p>
+
+                    <h3>License</h3>
+                    <p id="vb-license"></p>
+
+                    <h3>Gallery</h3>
+                    <div id="vb-gallery"></div>
+
+                    <div id="vb-poll"></div>
+                </div>
             </div>
         </div>
     </main>
@@ -148,19 +179,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script>
-        const p = new URLSearchParams(location.search);
-        const vb = voicebanks.find(v => v.id === p.get("id"));
-        if (vb) {
-            document.getElementById("n").textContent = vb.name;
-            document.getElementById("v").textContent = vb.version;
-            document.getElementById("t").textContent = vb.type;
-            document.getElementById("l").textContent = vb.language;
-            document.getElementById("r").textContent = vb.range;
-            document.getElementById("s").textContent = vb.statusText;
-            document.getElementById("d").textContent = vb.description;
-        }
-    </script>
 </body>
 
 </html>

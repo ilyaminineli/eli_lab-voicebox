@@ -1,4 +1,6 @@
 :root {
+
+    /* Main */
     --bg-paper: #f7f4ed;
     --ink-black: #1a1a1a;
     --vermillion: #c7362d;
@@ -7,11 +9,62 @@
     --border-thin: 1px solid #1a1a1a;
     --border-subtle: 1px solid rgba(26, 26, 26, 0.15);
     --frame-thickness: 1px;
-    /* same as card border */
     --frame-offset: 2rem;
-    /* distance from browser edge */
-    --font-heading: "Noto Serif JP", Georgia, serif;
-    --font-body: "Noto Sans JP", sans-serif;
+
+    /* Typography */
+    --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-display: "Hiragino Maru Gothic ProN", "Yu Mincho", "Noto Serif JP", sans-serif;
+    --font-body: "BIZ UDMincho", system-ui, sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 14px;
+    --radius-xl: 16px;
+    --radius-full: 999px;
+
+    /* Shadows */
+    --shadow-sm: 0 4px 12px var(--color-shadow-light);
+    --shadow-md: 0 8px 20px var(--color-shadow-medium);
+    --shadow-lg: 0 12px 32px var(--color-shadow-medium);
+
+    /* Paper */
+    --paper-noise:
+        radial-gradient(circle at 23px 23px, rgba(0, 0, 0, 0.03) 1px, transparent 0),
+        radial-gradient(circle at 73px 73px, rgba(0, 0, 0, 0.02) 1px, transparent 0),
+        radial-gradient(circle at 43px 93px, rgba(255, 255, 255, 0.8) 1px, transparent 0);
+    --paper-color: #f5efe8;
+}
+
+/* Base layout */
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    background-color: #ebebeb;
+    background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
+}
+
+/* Paper cards use same texture */
+main,
+.body,
+.download-link,
+.wiki-button,
+.wiki-infobox,
+.audio-preview,
+.footer_container,
+.info-box,
+.contact-card .timeline-date,
+.site-title-block {
+    background-color: #ebebeb;
+    background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
 }
 
 * {
@@ -21,7 +74,6 @@
 }
 
 body {
-    background: #f7f4ed;
     color: #1a1a1a;
     font-family: var(--font-body);
     line-height: 1.7;
@@ -29,14 +81,13 @@ body {
     margin: 0;
     position: relative;
     padding: 3rem;
-    /* internal passe-partout offset */
+    background-color: #ebebeb;
+    background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
 }
 
-/* Passe-partout-style decorative frame that scrolls with the page */
 body::before {
     content: "";
     position: absolute;
-    /* changed from fixed */
     top: var(--frame-offset);
     left: var(--frame-offset);
     right: var(--frame-offset);
@@ -70,7 +121,7 @@ header {
 }
 
 header h1 {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     font-size: 2.8rem;
     font-weight: 400;
     letter-spacing: 0.15em;
@@ -133,7 +184,7 @@ main {
 }
 
 .section-title {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     font-size: 1.5rem;
     margin-bottom: 2rem;
     padding-left: 1.2rem;
@@ -154,12 +205,12 @@ main {
 .voicebank-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .voicebank-card {
     border: var(--border-thin);
-    padding: 1.8rem;
+    padding: 1.4rem;
     position: relative;
     transition: transform 0.2s, box-shadow 0.2s;
     text-decoration: none;
@@ -195,7 +246,7 @@ main {
 }
 
 .card-header h2 {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     font-size: 1.3rem;
     margin-bottom: 0.4rem;
 }

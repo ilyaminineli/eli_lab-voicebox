@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -10,191 +9,29 @@
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .vb-detail {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 3rem;
-            align-items: start;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .vb-cover {
-            border: var(--border-thin);
-            aspect-ratio: 1;
-            padding: 0;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .vb-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .vb-wiki {
-            border-top: 1px solid rgba(26, 26, 26, 0.15);
-            padding-top: 1.5rem;
-        }
-
-        .vb-wiki h3 {
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            margin: 2rem 0 1rem;
-        }
-
-        .vb-wiki ul {
-            margin-left: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .vb-wiki p {
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        .vb-info {
-            position: sticky;
-            top: 2rem;
-        }
-
-        .vb-info h2 {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .vb-version {
-            display: inline-block;
-            font-size: 0.8rem;
-            color: #c7362d;
-            border: 1px solid #c7362d;
-            padding: 0.2rem 0.6rem;
-            margin: 0 0 1.5rem;
-        }
-
-        .vb-specs dl {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 0.5rem 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .vb-specs dt {
-            color: #6b6b6b;
-        }
-
-        .vb-specs dd {
-            margin: 0;
-        }
-
-        .vb-desc {
-            margin: 1.5rem 0;
-            line-height: 1.8;
-        }
-
-        .download-btn {
-            display: inline-block;
-            background: #c7362d;
-            color: #f7f4ed;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            margin-top: 0.5rem;
-        }
-
-        .download-btn:hover {
-            opacity: 0.85;
-        }
-
-        @media (max-width: 768px) {
-            .vb-detail {
-                grid-template-columns: 1fr;
-            }
-
-            .vb-info {
-                position: static;
-            }
-        }
+        .vb-detail{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start;max-width:1000px;margin:0 auto}
+        .vb-cover{border:var(--border-thin);aspect-ratio:1;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:2rem}
+        .vb-cover img{width:100%;height:100%;object-fit:cover;display:block}
+        .vb-wiki{border-top:1px solid rgba(26,26,26,.15);padding-top:1.5rem}
+        .vb-wiki h3{font-family:var(--font-heading);font-size:1.1rem;margin:2rem 0 1rem}
+        .vb-wiki ul{margin-left:1.5rem;line-height:1.7}
+        .vb-wiki p{line-height:1.7;margin-bottom:1rem}
+        .vb-info{position:sticky;top:2rem}.vb-info h2{font-family:var(--font-heading);font-size:2rem;margin-bottom:.5rem}
+        .vb-version{display:inline-block;font-size:.8rem;color:#c7362d;border:1px solid #c7362d;padding:.2rem .6rem;margin:0 0 1.5rem}
+        .vb-specs dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin:1.5rem 0}.vb-specs dt{color:#6b6b6b}.vb-specs dd{margin:0}
+        .vb-desc{margin:1.5rem 0;line-height:1.8}
+        .download-btn{display:inline-block;background:#c7362d;color:#f7f4ed;padding:.8rem 2rem;text-decoration:none;margin-top:.5rem}
+        .download-btn:hover{opacity:.85}
+        .vb-external-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}.vb-external-links a{border-bottom:1px solid #c7362d}
+        @media(max-width:768px){.vb-detail{grid-template-columns:1fr}.vb-info{position:static}}
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>eli_lab voicebox</h1>
-        <p class="tagline">UTAU Voicebanks & Vocal Tools</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="voicebanks.html" class="active">Voicebanks</a>
-            <a href="releases.html">Releases</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
-
-    <main>
-        <div class="vb-detail">
-            <!-- LEFT: image + wiki + gallery + poll -->
-            <div>
-                <div class="vb-cover">
-                    <img id="vb-cover-img" alt="Cover">
-                </div>
-
-                <div class="vb-wiki">
-                    <h3>Overview</h3>
-                    <p id="vb-overview"></p>
-
-                    <h3>Features</h3>
-                    <ul id="vb-features"></ul>
-
-                    <h3>Recommended usage</h3>
-                    <p id="vb-usage"></p>
-
-                    <h3>Recording notes</h3>
-                    <p id="vb-recording"></p>
-
-                    <h3>License</h3>
-                    <p id="vb-license"></p>
-
-                    <div id="vb-poll"></div>
-                </div>
-            </div>
-
-            <!-- RIGHT: basic info + description + download -->
-            <div class="vb-info">
-                <div class="vb-info-flex">
-                    <h2 id="vb-name">Name</h2>
-                    <span class="vb-version" id="vb-version">V1</span>
-
-                    <dl class="vb-specs">
-                        <dt>Type</dt>
-                        <dd id="vb-type"></dd>
-                        <dt>Language</dt>
-                        <dd id="vb-language"></dd>
-                        <dt>Range</dt>
-                        <dd id="vb-range"></dd>
-                        <dt>Status</dt>
-                        <dd id="vb-status"></dd>
-                    </dl>
-
-                    <p class="vb-desc" id="vb-desc"></p>
-
-                    <a href="#" class="download-btn" id="vb-download">Download</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>© 2026 eli_lab voicebox</p>
-        <p>UTAU synthesizer • Japanese & English</p>
-        <div class="seal">音</div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-</body>
-
-</html>
+<header><h1>eli_lab voicebox</h1><p class="tagline">UTAU Voicebanks & Vocal Tools</p><nav><a href="index.html">Home</a><a href="voicebanks.html" class="active">Voicebanks</a><a href="releases.html">Releases</a><a href="about.html">About</a></nav></header>
+<main><div class="vb-detail">
+<div><div class="vb-cover"><img id="vb-cover-img" alt="Cover"></div><div class="vb-wiki"><h3>Overview</h3><p id="vb-overview"></p><h3>Features</h3><ul id="vb-features"></ul><h3>Recommended usage</h3><p id="vb-usage"></p><h3>Recording notes</h3><p id="vb-recording"></p><h3>License</h3><p id="vb-license"></p><div id="vb-gallery"></div><div class="vb-external-links"><a id="vb-wiki-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Wiki</a></div></div></div>
+<div class="vb-info"><h2 id="vb-name">Name</h2><span class="vb-version" id="vb-version">V1</span><dl class="vb-specs"><dt>Type</dt><dd id="vb-type"></dd><dt>Language</dt><dd id="vb-language"></dd><dt>Range</dt><dd id="vb-range"></dd><dt>Status</dt><dd id="vb-status"></dd></dl><p class="vb-desc" id="vb-desc"></p><a href="#" class="download-btn" id="vb-download">Repository</a></div>
+</div></main>
+<footer><p>© 2026 eli_lab voicebox</p><p>UTAU voicebank archive • Japanese & other languages as documented</p><div class="seal">音</div></footer>
+<script src="assets/js/main.js"></script>
+</body></html>

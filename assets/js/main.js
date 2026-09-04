@@ -14,6 +14,13 @@ const voicebanks = [
     gallery: ["assets/img/covers/iirai_v2.png", "assets/img/covers/iirai_ver1.png"]
   },
   {
+    id: "iirai-akatsuki", name: "茜音イーライ・暁 (Akane Iirai · Akatsuki)", version: "Upcoming", type: "Japanese UTAU", language: "Japanese", range: "To be announced", status: "upcoming", statusText: "Upcoming",
+    description: "An upcoming new voicebank in the 茜音イーライ line. Further recording and technical specifications will be published with its release documentation.",
+    link: "voicebank.html?id=iirai-akatsuki", cover: "assets/img/covers/iirai_v2.png", website: "https://github.com/ELIASADAMS/Iirai", wikiUrl: "https://utau.fandom.com/wiki/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4", wikiLabel: "Iirai Wiki / Character Reference",
+    wiki: { overview: "茜音イーライ・暁 is an upcoming voicebank. This entry is reserved for the new release and intentionally avoids publishing unconfirmed technical specifications.", features: ["Upcoming release", "Part of the 茜音イーライ voicebank line", "New recording / voicebank configuration", "Technical specifications to be announced"], usage: "Release information and recommended usage will be added when the voicebank is published.", recordingNotes: "Technical recording details are not published yet.", license: "Release terms will be published with the voicebank." },
+    gallery: ["assets/img/covers/iirai_v2.png"]
+  },
+  {
     id: "eugene", name: "友人 (Eugene)", version: "Current", type: "Japanese CVVC", language: "Japanese", range: "G#3–D3", status: "released", statusText: "Released",
     description: "A warm, intimate Japanese CVVC voicebank with a slightly uncanny edge, created from preserved fragments, reconstructed phonemes, and extensive post-production.",
     link: "voicebank.html?id=eugene", cover: "assets/img/covers/eugene.png", website: "https://github.com/ELIASADAMS/eugene-utau", wikiUrl: "https://utau.fandom.com/wiki/%E5%8F%8B%E4%BA%BA", wikiLabel: "友人 Wiki",
@@ -21,11 +28,25 @@ const voicebanks = [
     gallery: ["assets/img/covers/eugene.png"]
   },
   {
+    id: "eugene-re", name: "友人RE (Eugene RE)", version: "Upcoming", type: "Japanese CVVC", language: "Japanese", range: "To be announced", status: "upcoming", statusText: "05 Nov 2026",
+    description: "The second-generation 友人 voicebank, built around a substantially expanded recording set and a new technical foundation while keeping the identity of the original voice.",
+    link: "voicebank.html?id=eugene-re", cover: "assets/img/covers/eugene RE.png", website: "https://github.com/ilyaminineli/eugene-utau", wikiUrl: "https://utau.fandom.com/wiki/%E5%8F%8B%E4%BA%BA", wikiLabel: "友人 Wiki",
+    wiki: { overview: "友人RE is the second-generation 友人 voicebank. It expands the original Japanese CVVC foundation with additional sustained vowels, glottal stops, vocal fry, breath, consonant variants, expressive fragments and experimental extras.", features: ["Expanded Japanese CVVC recording set", "Sustained vowels and glottal stops", "Vocal fry and breath material", "Additional consonant variants and expressive extras"], usage: "Designed for expressive Japanese singing and more detailed control over texture, articulation and character.", recordingNotes: "Updated reclist optimisation by eikton and private enhanced base-model development by Yar / AI Singers support the new generation.", license: "Release terms will be published with the 友人RE release." },
+    gallery: ["assets/img/covers/eugene RE.png", "assets/img/covers/eugene.png"]
+  },
+  {
     id: "takismana", name: "タキスマナ (Takismana)", version: "V1", type: "Voicebank", language: "Japanese", range: "Metadata pending", status: "upcoming", statusText: "Metadata Pending",
     description: "Takismana is part of the eli_lab voicebank collection. Technical and licensing metadata will be added from authoritative documentation.",
     link: "voicebank.html?id=takismana", cover: "assets/img/covers/takismana.png", website: null, wikiUrl: null, wikiLabel: "Documentation pending",
     wiki: { overview: "This entry is intentionally incomplete until the authoritative Takismana manual and release metadata are added.", features: ["Metadata pending", "Documentation pending", "Release information pending"], usage: "Pending authoritative technical documentation.", recordingNotes: "Do not infer recording format, range or sample rate from the current draft site.", license: "Pending authoritative terms." },
     gallery: ["assets/img/covers/takismana.png"]
+  },
+  {
+    id: "spider", name: "SPIDER", version: "Upcoming", type: "Experimental Voicebank", language: "To be announced", range: "To be announced", status: "upcoming", statusText: "Upcoming",
+    description: "An upcoming experimental voicebank represented by the SPIDER design. Technical format, language and release details will be announced separately.",
+    link: "voicebank.html?id=spider", cover: "assets/img/covers/SPIDER.png", website: null, wikiUrl: null, wikiLabel: "Documentation pending",
+    wiki: { overview: "SPIDER is an upcoming experimental voicebank entry in the eli_lab collection. This catalog entry stays intentionally minimal until authoritative technical documentation is available.", features: ["Upcoming experimental voicebank", "New character / visual identity", "Technical specifications pending", "Release information pending"], usage: "To be documented with the release.", recordingNotes: "Not published yet.", license: "Release terms pending." },
+    gallery: ["assets/img/covers/SPIDER.png"]
   }
 ];
 

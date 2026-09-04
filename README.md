@@ -5,9 +5,12 @@ Draft hub for the ELI LAB UTAU / OpenUtau voicebank collection.
 ## Current catalog
 
 - **友人 (Eugene)** — current Japanese CVVC release. Repository: `ELIASADAMS/eugene-utau`
+- **友人RE (Eugene RE)** — upcoming second-generation Japanese CVVC voicebank. Repository: `ilyaminineli/eugene-utau`
 - **茜音イーライ (Akane Iirai)** — updated version of the original イーライ. Repository: `ELIASADAMS/Iirai`
+- **茜音イーライ・暁 (Akane Iirai · Akatsuki)** — upcoming new voicebank in the 茜音イーライ line.
 - **イーライ (Iirai)** — original / legacy version, preserved for reproducibility.
 - **タキスマナ (Takismana)** — catalog placeholder; authoritative metadata still to be added.
+- **SPIDER** — upcoming experimental voicebank; technical metadata still to be added.
 
 ## Data policy
 
@@ -17,4 +20,4 @@ The catalog intentionally distinguishes original releases from updated revisions
 
 ## Status
 
-This is still a draft site. The current goal is to establish a reliable catalog structure first; visual polish, richer media, downloads, search and additional voicebanks can be added later.
+This is still a draft site. Upcoming voicebanks may appear in the catalog before their public releases; entries only expose information that is currently established.

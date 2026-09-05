@@ -19,19 +19,20 @@ const voicebanks = [
     gallery: [
       "assets/img/covers/iirai_v2.png",
       "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/promotional/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Official%20Art.png",
-      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Figure.PNG",
-      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Icon%20HiRes.png"
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4/%E8%8C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Figure.PNG",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4/%E8%8C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Icon%20HiRes.png"
     ]
   },
   {
     id: "iirai-akatsuki", name: "茜音イーライ・暁 (Akane Iirai · Akatsuki)", version: "Upcoming", type: "Japanese UTAU", language: "Japanese", range: "To be announced", status: "upcoming", statusText: "Upcoming",
     description: "An upcoming new voicebank in the 茜音イーライ line. Further recording and technical specifications will be published with its release documentation.",
-    link: "voicebank.html?id=iirai-akatsuki", cover: "assets/img/covers/iirai_v2.png", website: "https://ilyaminineli.github.io/Iirai/", wikiUrl: "https://utau.fandom.com/wiki/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4", wikiLabel: "Iirai Wiki / Character Reference",
+    link: "voicebank.html?id=iirai-akatsuki", cover: "assets/img/covers/Iirai v3.png", website: "https://ilyaminineli.github.io/Iirai/", wikiUrl: "https://utau.fandom.com/wiki/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4", wikiLabel: "Iirai Wiki / Character Reference",
     wiki: { overview: "茜音イーライ・暁 is an upcoming voicebank. This entry is reserved for the new release and intentionally avoids publishing unconfirmed technical specifications.", features: ["Upcoming release", "Part of the 茜音イーライ voicebank line", "New recording / voicebank configuration", "Technical specifications to be announced"], usage: "Release information and recommended usage will be added when the voicebank is published.", recordingNotes: "Technical recording details are not published yet.", license: "Release terms will be published with the voicebank." },
     gallery: [
-      "assets/img/covers/iirai_v2.png",
+      "assets/img/covers/Iirai v3.png",
       "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/promotional/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%BB%E6%9A%81Official%20Art.png",
-      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A6%E3%83%BB%E6%9A%81/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A6%E3%83%BB%E6%9A%81%20Figure.png"
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%BB%E6%9A%81/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%BB%E6%9A%81%20Figure.png",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%BB%E6%9A%81/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%BB%E6%9A%81%20Icon%20HiRes.png"
     ]
   },
   {

@@ -280,6 +280,11 @@ main {
     color: #f7f4ed;
 }
 
+.status-production {
+    background: #1a1a1a;
+    color: #f7f4ed;
+}
+
 .card-meta {
     font-size: 0.85rem;
     color: #6b6b6b;

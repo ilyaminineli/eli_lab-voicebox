@@ -4,21 +4,35 @@ const voicebanks = [
     description: "The original イーライ voicebank preserved as a historical release. It remains available for reproducibility and reference.",
     link: "voicebank.html?id=iirai-v1", cover: "assets/img/covers/iirai_ver1.png", website: "https://ilyaminineli.github.io/Iirai/", wikiUrl: "https://utau.fandom.com/wiki/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4", wikiLabel: "Original イーライ Wiki",
     wiki: { overview: "The original version of Iirai. Akane Iirai is the updated revision and should be used for the current technical specification.", features: ["Original Japanese CVVC voicebank", "Historical version preserved for reproducibility", "Original イーライ / 怪人ハサミ identity", "Legacy artwork and documentation retained"], usage: "Use this release when reproducing older projects or studying the original Iirai voicebank. For the current revision, use Akane Iirai.", recordingNotes: "Historical technical details should be taken from the original release materials and Wiki rather than the Akane Iirai manual.", license: "See the original release documentation and repository terms." },
-    gallery: ["assets/img/covers/iirai_ver1.png"]
+    gallery: [
+      "assets/img/covers/iirai_ver1.png",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/promotional/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Official%20Art.PNG",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Figure.png",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Icon%20HiRes.png"
+    ]
   },
   {
     id: "iirai-v2", name: "茜音イーライ (Akane Iirai)", version: "Updated", type: "Japanese CVVC", language: "Japanese", range: "G#3–D3", status: "released", statusText: "Released",
     description: "Updated version of the original イーライ with improved phoneme clarity, three pitches, and a clearer, more confident upper range while retaining the warm bass-leaning core.",
     link: "voicebank.html?id=iirai-v2", cover: "assets/img/covers/iirai_v2.png", website: "https://ilyaminineli.github.io/Iirai/", wikiUrl: "https://utau.fandom.com/wiki/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4", wikiLabel: "Iirai Wiki / Original Reference",
     wiki: { overview: "茜音イーライ is the updated version of the original イーライ. The current manual describes improved phoneme clarity, a warm bass-leaning core, and a clear upper range suited to expressive phrasing.", features: ["Three pitches: A3 / F3 / C3", "Improved phoneme clarity compared with the first iteration", "Warm bass-leaning core with clearer upper range", "Consonant clarity, high end and bass"], usage: "Designed for expressive Japanese singing, including fast rambling lines, chant-like passages and subtle glitched ad-libs. Recommended: TIPS, Moresampler, WORLDLINE-R and wavtool4vcv.", recordingNotes: "Romaji-encoded, CVVC aliased. Optimum tempo: 70–120 BPM.", license: "Free for non-commercial voicebank use; contact the creator for commercial use. Character merchandise and logos require permission from creator and illustrator." },
-    gallery: ["assets/img/covers/iirai_v2.png", "assets/img/covers/iirai_ver1.png"]
+    gallery: [
+      "assets/img/covers/iirai_v2.png",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/promotional/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Official%20Art.png",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Figure.PNG",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%20Icon%20HiRes.png"
+    ]
   },
   {
     id: "iirai-akatsuki", name: "茜音イーライ・暁 (Akane Iirai · Akatsuki)", version: "Upcoming", type: "Japanese UTAU", language: "Japanese", range: "To be announced", status: "upcoming", statusText: "Upcoming",
     description: "An upcoming new voicebank in the 茜音イーライ line. Further recording and technical specifications will be published with its release documentation.",
     link: "voicebank.html?id=iirai-akatsuki", cover: "assets/img/covers/iirai_v2.png", website: "https://ilyaminineli.github.io/Iirai/", wikiUrl: "https://utau.fandom.com/wiki/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4", wikiLabel: "Iirai Wiki / Character Reference",
     wiki: { overview: "茜音イーライ・暁 is an upcoming voicebank. This entry is reserved for the new release and intentionally avoids publishing unconfirmed technical specifications.", features: ["Upcoming release", "Part of the 茜音イーライ voicebank line", "New recording / voicebank configuration", "Technical specifications to be announced"], usage: "Release information and recommended usage will be added when the voicebank is published.", recordingNotes: "Technical recording details are not published yet.", license: "Release terms will be published with the voicebank." },
-    gallery: ["assets/img/covers/iirai_v2.png"]
+    gallery: [
+      "assets/img/covers/iirai_v2.png",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/promotional/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%BB%E6%9A%81Official%20Art.png",
+      "https://raw.githubusercontent.com/ilyaminineli/Iirai/main/assets/character/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A6%E3%83%BB%E6%9A%81/%E8%8C%9C%E9%9F%B3%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A6%E3%83%BB%E6%9A%81%20Figure.png"
+    ]
   },
   {
     id: "eugene", name: "友人 (Eugene)", version: "Current", type: "Japanese CVVC", language: "Japanese", range: "G#3–D3", status: "released", statusText: "Released",
